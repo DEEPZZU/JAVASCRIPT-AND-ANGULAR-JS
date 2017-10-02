@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<HEAD>
+<SCRIPT>
+
+var x = 0;
+var array = Array();
+
+function add()
+{
+ array[x] = document.getElementById("text1").value;
+ alert("Element: " + array[x] + " Added at index " + x);
+ x++;
+ document.getElementById("text1").value = "";
+}
+
+
+function sort()
+{
+   var e = "<hr/>";   
+   var temp;
+	
+   for(var i=0;i<array.length;i++)
+   {
+    for(var j=0;j<array.length;j++)
+	{
+	if(array[j]>array[j+1])
+	{
+	temp=array[j+1];
+	array[j+1]=array[j];
+	array[j]=temp;
+	}
+	}
+
+
+    }
+
+    
+   for (var y=0; y<array.length; y++)
+   {
+     e += "Element " + y + " = " + array[y] + "<br/>";
+   }
+   document.getElementById("Result").innerHTML = e;
+}
+    
+
+       
+
+</SCRIPT>
+</HEAD>
+<body>
+
+<h1>BUBBLE SORT</h1>
+<input type="text" id="text1"></input>
+<input type="button" id="button1" value="Add" onclick="add();"></input>
+<input type="button" id="button2" value="Sort" onclick="sort();"></input>
+<div id="Result"></div>  
+</body>
+</html>
+ 

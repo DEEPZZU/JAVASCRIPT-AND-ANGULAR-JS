@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<HEAD>
+<SCRIPT>
+function validate()
+{
+var pass1="123";
+x=document.forms[0][1].value;
+
+if (x==pass1)
+  	{
+	alert("Password Correct! Click OK to enter!");
+	return true;
+	}
+
+else
+   	{
+	alert("Password Wrong");
+    	return false;
+    	}
+  
+}
+
+
+</SCRIPT>
+</HEAD>
+<body>
+
+<h1>FORM</h1>
+<FORM >
+<TABLE>
+<TR><TD>NAME:</TD><TD><INPUT TYPE="TEXT" NAME="T1" VALUE="NAME" /></TD></TR>
+<TR><TD>PASSWORD:</TD><TD><INPUT TYPE="PASSWORD" NAME="T2" /></TD></TR>
+<TR><TD></TD><TD><INPUT TYPE="SUBMIT" NAME="B1" onclick="return validate()" /></TD></TR>
+</TABLE>
+</FORM >
+
+</body>
+</html>
+

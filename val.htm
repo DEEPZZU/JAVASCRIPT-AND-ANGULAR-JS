@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<HEAD>
+<SCRIPT>
+function validateNAME()
+{
+	var x=document.forms[0][0].value; 
+   	var letters = /^[A-Za-z]+$/;  
+  	if(x.match(letters))  
+     	{  
+      	return true;  
+     	}  
+   	else  
+     	{  
+     	alert("Name should contains aplhabets only");  
+     	return false;  
+     	}
+}
+
+function validateRNO()
+{
+    var x = document.forms[0][1].value;
+   
+    if (x.length!=7)
+    {
+      alert("Roll number should be a seven digit number value");
+      return false;
+    }
+}
+function validateDOB() 
+{
+    var x = document.forms[0][2].value;
+    if (x == null || x == "")
+    {
+        alert("DOB must be filled out");
+        return false;
+    }
+}
+
+</SCRIPT>
+</HEAD>
+<body>
+
+<h1>FORM</h1>
+<FORM>
+<TABLE>
+<TR><TD>NAME:</TD><TD><INPUT TYPE="TEXT" NAME="T1" VALUE="NAME" ONBLUR="validateNAME()" /></TD></TR>
+
+<TR><TD>ROLLNO:</TD><TD><INPUT TYPE="TEXT" NAME="T1" VALUE="RNO" ONBLUR="validateRNO()"/></TD></TR>
+
+<TR><TD>DOB:</TD><TD><INPUT TYPE="DATE" NAME="T1" VALUE="DT" ONSUBMIT="validateDOB()"/></TD></TR>
+
+<TR><TD><INPUT TYPE="SUBMIT" NAME="B1"/></TD><TD><INPUT TYPE="reset" NAME="B2"/></TD></TR>
+</TABLE>
+</FORM>
+
+</body>
+</html>
+

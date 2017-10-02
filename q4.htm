@@ -1,0 +1,48 @@
+<html>
+<HEAD>
+<SCRIPT>
+
+var x = 0;
+var array = Array();
+
+function push()
+{
+ alert("hi");
+ array[x] = document.getElementById("text1").value;
+ alert("Element: " + array[x] + " pushed ");
+ x++;
+ document.getElementById("text1").value = "";
+}
+
+
+function pop()
+{
+   var e = "<hr/>";   
+   e= e+ "Element popped = " + array[array.length-1] + "<br/>";
+   document.getElementById("Result").innerHTML = e;
+   array.length=array.length-1;
+
+}
+
+function pop_all()
+{
+   var e = "<hr/>";    
+   for (var y=array.length-1; y>=0; y--)
+   {
+     e += "Element " + " = " + array[y] + "<br/>";
+   }
+   document.getElementById("Result").innerHTML = e;
+}
+
+</SCRIPT>
+</HEAD>
+<body>
+
+<h1>STACK IMPLEMENTATION</h1>
+<input type="text" id="text1"></input>
+<input type="button" id="button1" value="PUSH" onclick="push();"></input>
+<input type="button" id="button2" value="POP" onclick="pop();"></input>
+<input type="button" id="button3" value="POP ALL" onclick="pop_all();"></input>
+<div id="Result"></div>  
+</body>
+</html>
