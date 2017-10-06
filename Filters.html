@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <script src="angular.js"></script>
+    <script src="MyModule.js"></script>
+    <title>AngularJS Filters</title>
+</head>
+<body ng-app="myModule" >
+    <div ng-controller="printController" >
+        <input type="text" placeholder="SEARCH TEXT HERE" ng-model="search"/>
+        <hr/>
+        <table border="2" cellspacing="5" cellpadding="5" >
+            <tr ng-repeat="employee in employees | filter:search | orderBy: 'firstName'">
+                <td align="center">
+                    {{ employee.firstName}}
+                </td>
+                <td align="center">
+                    {{ employee.lastName  }}
+                </td>
+                <td align="center">
+                    {{ employee.gender}}
+                </td>
+                <td align="center">
+                    {{ employee.salary }}
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
