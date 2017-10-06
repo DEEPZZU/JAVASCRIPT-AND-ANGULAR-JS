@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <script src="angular.js"></script>
+    <title>Using AngularJS Directives 2</title>
+</head>
+<body>
+    <table ng-app="">
+        <tr>
+            <td>
+                <input type="checkbox" ng-model="disableValue" />Disable?
+            </td>
+            <td>
+                <button ng-disabled="disableValue" >Click ME!</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" ng-model="showOnClickValue" />View?
+            </td>
+            <td>
+                <button ng-show="showOnClickValue">Click ME!</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button ng-click="clicks=clicks+1">Click ME!</button>
+            </td>
+            <td>
+                Total Clicks : {{ clicks }}
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
