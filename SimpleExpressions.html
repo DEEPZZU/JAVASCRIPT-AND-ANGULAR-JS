@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <script src="angular.js"></script>
+    <title>Expressions in AngularJS</title>
+</head>
+<body ng-app="">
+    <h1>Bill Generator</h1>
+    <p><H3>Enter your information:</H3></p>
+    <div >
+        <table>
+            <tr>
+                <td>Enter your first name:</td>
+                <td><input type="text" ng-model="firstName" /></td>
+            </tr>
+            <tr>
+                <td>Enter your Last name:</td>
+                <td><input type="text" ng-model="lastName" /></td>
+            </tr>
+            <tr>
+                <td>Enter Cost of the Item:</td>
+                <td><input type="text" ng-model="cost" /></td>
+            </tr>
+            <tr>
+                <td>Enter Quantity of the Item:</td>
+                <td><input type="text" ng-model="quantity" /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="checkbox" ng-model="onSubmit"/>Done?</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <span ng-show="onSubmit">
+        Dear Mr./Ms. {{ firstName+" "+lastName+" "+ ". You have to pay Rs."+ cost*quantity+"." }}
+        </span>
+    </div>
+</body>
+</html>
