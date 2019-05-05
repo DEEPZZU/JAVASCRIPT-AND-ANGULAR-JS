@@ -7,7 +7,7 @@ It has been licensed by Apache Org and maintained by Google (thats why you would
 
 # Why AngularJS ? 
 
-It is cross-browser compliant i.e. each browser has its own javascript engine and a javascript code may produce error on one browser while running flexibly on ither, AngularJS simply takes all your worries away!
+It is cross-browser compliant i.e. each browser has its own javascript engine and a javascript code may produce error on one browser while running flexibly on other, AngularJS simply takes all your worries away!
 Secondly, it starts automatically once your browser starts.
 Besides, there are other add-ons like it is open source, it supports MVC etc.
 
